@@ -62,7 +62,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid teal;
 }
 
 /*Хеадер*/
@@ -102,28 +101,27 @@ img {
 .revers-logo span {color: var(--accent-color);}
 
 /*Site-nav* *address-nav*/
-.site-nav .link
-{color: var(--primary-text-color);
+.site-nav .link {
+  color: var(--primary-text-color);
 font-weight: 500;
 letter-spacing: 0.02em;
+}
 
-display: block;
+.site-nav .item {
+display: flex;
 
 margin-right: 50px;
 padding-top: 32px;
 padding-bottom: 32px;
-
-outline: 1px solid blue;
 }
 
-.site-nav .link :last-child {
+.site-nav .item:last-child {
   margin-right: 0px;
 }
 
 .site-nav.list {
   display: flex;
   align-items: center;
-  margin-left: 50px;
 }
 
 .site-nav .link:hover, 
@@ -151,8 +149,6 @@ display: block;
 
 padding-top: 32px;
 padding-bottom: 32px;;
-
-outline: 1px solid blue;
 }
 
 .address-nav .mailto {
@@ -259,9 +255,9 @@ line-height: 1.75;
   line-height: 1.6;
 
   border-radius: 4px;
-  margin-right: 8px;
 
 }
+
 
 .button.activ {
   color: var(--primary-white-color);
@@ -284,6 +280,9 @@ line-height: 1.75;
 
 }
 
+.button:last-child {
+  margin-right: 0;
+}
 /*Секции*/
 .section-title {
     color: var(--primary-text-color);
@@ -360,7 +359,7 @@ margin-left: 30px;
   display: flex;
 }
 
-.filter.list .button + .button{
+.filter.list .item + .item{
  margin-left: 8px;
 }
 
@@ -375,14 +374,12 @@ margin-left: 30px;
   flex-wrap: wrap;
 
   margin-top: 34px;
-  outline: 1px solid salmon;
 }
 
 
 .portfolio.list .item{
   margin-right: 30px;
   margin-bottom: 30px;
-  outline: 1px solid tomato;
 }
 
 .portfolio.list .item:nth-child(3n){
