@@ -22,7 +22,60 @@ body {
     line-height: 1.2;
   }
 
-  .logo {
+  h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  }
+
+/* Формат списков и ссылок (обнуление)*/
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+
+  /* Контейнер*/
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid teal;
+}
+
+/*Хеадер*/
+.header {
+  background-color: azure;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-nav {
     color: var(--logo-text-color);
     font-family: Raleway,sans-serif;
     font-weight: 700;
@@ -30,9 +83,11 @@ body {
     font-size: 26px;
     line-height: 1.2;
 
+    margin-right: 93px;
+
   }
   
-  .revers-logo {
+.revers-logo {
     color: var(--primary-white-color);
     background-color: var(--background-color);
     font-family: Raleway,sans-serif;
@@ -42,20 +97,32 @@ body {
     line-height: 1.2;
   }
 
-  .logo span {color: var(--accent-color);}
-  .revers-logo span {color: var(--accent-color);}
+.logo-nav span {color: var(--accent-color);}
+.revers-logo span {color: var(--accent-color);}
 
 /*Site-nav* *address-nav*/
 .site-nav .link
 {color: var(--primary-text-color);
 font-weight: 500;
 letter-spacing: 0.02em;
+
+display: block;
+
+margin-right: 50px;
+padding-top: 32px;
+padding-bottom: 32px;
+
+outline: 1px solid blue;
 }
 
-.address-nav .link
-{color: var(--secondary-text-color);
-font-weight: 500;
-letter-spacing: 0.02em;
+.site-nav .link :last-child {
+  margin-right: 0px;
+}
+
+.site-nav.list {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .site-nav .link:hover, 
@@ -70,11 +137,42 @@ color: var(--accent-color);
     color: var(--accent-color);  
 }
 
+.site-nav {
+
+}
+
+.address-nav .link
+{color: var(--secondary-text-color);
+font-weight: 500;
+letter-spacing: 0.02em;
+
+display: block;
+
+padding-top: 32px;
+padding-bottom: 32px;;
+
+outline: 1px solid blue;
+}
+
+.address-nav .mailto {
+  margin-right: 50px;
+}
+
+.address-nav {
+  margin-left: auto;
+}
+
+.address-nav {
+  display: flex;
+  align-items: center;
+}
 
 /*Футер*/
 
 .page-footer {
     background-color: var(--background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
     
 }
 .mailto-footer,
@@ -88,6 +186,8 @@ color: var(--accent-color);
   font-style: normal;
   color: var(--primary-white-color);
   line-height: 1.75;
+
+  margin-top: 20px;
 }
 
 .address-footer :hover,
@@ -96,13 +196,12 @@ color: var(--accent-color);
   color: var(--accent-color);
 }
 
-/* Формат списков и ссылок */
-.list {list-style: none;}
-a {text-decoration: none;}
-
 /*Секция Герой*/
 .hero {
     background-color: var(--background-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 .hero-title {
     color: var(--primary-white-color);
@@ -111,15 +210,33 @@ a {text-decoration: none;}
     font-weight: 900;
     line-height: 1.4;
     letter-spacing: 0,06em;
-    text-align: center;
+
+    margin-bottom: 30px;
 }
 /*Секция преимущества*/
+
+.benefits-section {
+margin-top: 94px;
+margin-bottom: 94px;
+}
+
+.benefits.list {
+  display: flex;
+}
+
+.benefits.list .item + .item {
+  margin-left: 30px;
+}
+
 .benefits.list h3 {
   color: var(--primary-text-color);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
+
+  margin-bottom: 10px;
 }
+
 .benefits.list p{
 color: var(--secondary-text-color);
 line-height: 1.75;
@@ -162,6 +279,8 @@ button {
     font-weight: 700;
     font-size: 36px;
     text-align: center;
+
+    margin-bottom: 50px;
   }
 .section h3 {
 color: var(--primary-text-color);
@@ -173,6 +292,59 @@ font-size: 16px;
   font-weight: 400;
   font-size: 16px;
   }
+
+/*Секция услуги*/
+.services.section {
+  margin-bottom: 94px;
+}
+
+.services.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services.list .item + .item {
+  margin-left: 30px;
+}
+
+/*Секция комнада*/
+.team-section {
+  background-color: var(--background-color-secondary);
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team.list {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.team.list .item {
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+/* не работает обнуление 4го ребенка так как соседи есть у всех .team.list .item + .item {
+margin-left: 30px;
+}*/
+
+.team.list .item:nth-child(4n){
+  margin-right: 0px;
+}
+
+.team.list h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.team.list h3,
+.team.list p {
+  text-align: center;
+}
+
+
 /*Секции портфолио*/
 .portfolio-section h3 {
   color: var(--primary-text-color);
@@ -193,10 +365,5 @@ font-size: 16px;
     background-color: var(--background-color-secondsry);
 }*/
 
-/*Особенности секции Наша команда*/
 
-.team.list h3,
-.team.list p {
-  text-align: center;
-}
 
