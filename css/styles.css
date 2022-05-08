@@ -9,6 +9,7 @@
     --primary-white-color: #ffffff;
     --background-color: #2F303A;
     --background-color-secondary: #F5F4FA;
+    --border-color: #ECECEC
   }
 
 body {
@@ -66,14 +67,15 @@ img {
 
 /*Хеадер*/
 .header {
-  background-color: azure;
+border-bottom: 1px solid var(--border-color);
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  border: 1px solid #ECECEC;
 }
+
+/*Логотипы*/
 
 .logo-nav {
     color: var(--logo-text-color);
@@ -102,7 +104,7 @@ img {
 
 /*Site-nav* *address-nav*/
 .site-nav .link {
-  color: var(--primary-text-color);
+color: var(--primary-text-color);
 font-weight: 500;
 letter-spacing: 0.02em;
 }
@@ -134,10 +136,6 @@ color: var(--accent-color);
 .site-nav .link.current,
 .address-nav .link.current{
     color: var(--accent-color);  
-}
-
-.site-nav {
-
 }
 
 .address-nav .link
@@ -210,34 +208,6 @@ padding-bottom: 32px;;
 
     margin-bottom: 30px;
 }
-/*Секция преимущества*/
-
-.benefits-section {
-margin-top: 94px;
-margin-bottom: 94px;
-}
-
-.benefits.list {
-  display: flex;
-}
-
-.benefits.list .item + .item {
-  margin-left: 30px;
-}
-
-.benefits.list h3 {
-  color: var(--primary-text-color);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-
-  margin-bottom: 10px;
-}
-
-.benefits.list p{
-color: var(--secondary-text-color);
-line-height: 1.75;
-}
 
 /*Button*/
 
@@ -255,7 +225,6 @@ line-height: 1.75;
   line-height: 1.6;
 
   border-radius: 4px;
-
 }
 
 
@@ -284,6 +253,12 @@ line-height: 1.75;
   margin-right: 0;
 }
 /*Секции*/
+.section {
+padding-top: 94px;
+padding-bottom: 94px;
+}
+
+
 .section-title {
     color: var(--primary-text-color);
     font-weight: 700;
@@ -303,9 +278,37 @@ font-size: 16px;
   font-size: 16px;
   }
 
+/*Секция преимущества*/
+
+.benefits.list {
+  display: flex;
+}
+
+.benefits.list .item + .item {
+  margin-left: 30px;
+}
+
+.benefits.list .item {
+  width: 270px;
+}
+
+.benefits.list h3 {
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+.benefits.list p{
+color: var(--secondary-text-color);
+line-height: 1.75;
+}
+
 /*Секция услуги*/
 .services.section {
-  margin-bottom: 94px;
+  padding-top: 0px;
 }
 
 .services.list {
@@ -318,11 +321,8 @@ font-size: 16px;
 }
 
 /*Секция комнада*/
-.team-section {
+.team.section {
   background-color: var(--background-color-secondary);
-
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team.list {
@@ -332,7 +332,7 @@ font-size: 16px;
 }
 
 .team.list .item {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   margin-right: 30px;
 }
 
@@ -357,6 +357,8 @@ margin-left: 30px;
 /*Секция портфолио кнопки-фильтры !!!!!НЕ РАБОТАЕТ центрирование*/
 .filter.list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter.list .item + .item{
@@ -364,23 +366,18 @@ margin-left: 30px;
 }
 
 /*Секции портфолио*/
-.portfolio-section {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
 
 .portfolio.list {
   display: flex;
   flex-wrap: wrap;
-
-  margin-top: 34px;
 }
-
 
 .portfolio.list .item{
   margin-right: 30px;
   margin-bottom: 30px;
+  outline: 1px solid var(--border-color);
 }
+
 
 .portfolio.list .item:nth-child(3n){
   margin-right: 0px;
@@ -390,27 +387,25 @@ margin-left: 30px;
   margin-bottom: 0px;
 }
 
-.portfolio-section h3 {
+.portfolio.list .card {
+  width: 370px;
+  padding: 20px 24px;
+}
+
+.portfolio.section h3 {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 
-  margin-right: 24px;
-  margin-left: 24px;
-  margin-top: 20px;
   margin-bottom: 4px;
 }
-.portfolio-section p {
+.portfolio.section p {
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
-
-  margin-right: 24px;
-  margin-left: 24px;
-  margin-bottom: 20px;
   }
 
 
