@@ -163,7 +163,6 @@ padding-bottom: 32px;;
 }
 
 /*Футер*/
-
 .page-footer {
     background-color: var(--background-color);
     padding-top: 60px;
@@ -190,6 +189,12 @@ padding-bottom: 32px;;
 .tel-footer :hover{
   color: var(--accent-color);
 }
+
+.adress-footer,
+.mailto-footer {
+  margin-bottom: 9px;
+}
+
 
 /*Секция Герой*/
 .hero {
@@ -275,7 +280,6 @@ font-size: 16px;
 .section p {
   color: var(--secondary-text-color);
   font-weight: 400;
-  font-size: 16px;
   }
 
 /*Секция преимущества*/
@@ -303,7 +307,7 @@ font-size: 16px;
 
 .benefits.list p{
 color: var(--secondary-text-color);
-line-height: 1.75;
+line-height: 1.7;
 }
 
 /*Секция услуги*/
