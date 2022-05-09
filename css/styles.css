@@ -174,12 +174,15 @@ padding-bottom: 32px;;
     font-style: normal;
     color: var( --transparent-text);
     line-height: 1.75;
+
+    display: inline-block;
+    margin-top: 9px;
 }
 
 .address-footer {
   font-style: normal;
   color: var(--primary-white-color);
-  line-height: 1.75;
+  line-height: 1.7;
 
   margin-top: 20px;
 }
@@ -189,12 +192,6 @@ padding-bottom: 32px;;
 .tel-footer :hover{
   color: var(--accent-color);
 }
-
-.adress-footer,
-.mailto-footer {
-  margin-bottom: 9px;
-}
-
 
 /*Секция Герой*/
 .hero {
